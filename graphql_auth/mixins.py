@@ -120,7 +120,7 @@ class RegisterMixin(Output):
 
                     if app_settings.ALLOW_LOGIN_NOT_VERIFIED:
                         payload = cls.login_on_register(
-                            root, info, password=kwargs.get("password1"), **kwargs
+                            root, info, password=kwargs.get("password1"), username=user.username,**kwargs
                         )
                         return_value = {}
                         for field in cls._meta.fields:
