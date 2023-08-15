@@ -28,10 +28,10 @@ class UpdateAccountForm(UserChangeForm):
         fields = flat_dict(app_settings.UPDATE_MUTATION_FIELDS)
         field_classes = {"username": CustomUsernameField}
 
-class UpdateAccountWithoutEmailForm(UpdateAccountForm):
     def __init__(self, *args, **kwargs):
-        super(UpdateAccountWithoutEmailForm, self).__init__(*args, **kwargs)
-        self.fields.pop('email')
+        super(UpdateAccountForm, self).__init__(*args, **kwargs)
+        for key, field in self.fields.items():
+            self.fields[key].required = False
 
 
 class PasswordLessRegisterForm(UserCreationForm):
