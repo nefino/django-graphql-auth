@@ -15,9 +15,9 @@ def get_version(package):
 
 
 tests_require = [
-    "pytest>=3.6.3",
+    "pytest>=5.4",
     "pytest-cov>=2.4.0",
-    "pytest-django>=3.1.2",
+    "pytest-django>=4.6.0",
     "coveralls",
 ]
 
@@ -42,11 +42,11 @@ setup(
     ),
     packages=find_packages(exclude=["tests*"]),
     install_requires=[
-        "Django>=2.2.0",
-        "django-graphql-jwt>=0.3.1,<0.4.0",
+        "Django>=3.0.0",
+        "django-graphql-jwt>=0.3.3",
         "django-filter>=2.2.0",
-        "graphene_django>=2.1.8",
-        "graphene>=2.1.8",
+        "graphene_django==3.2.0",
+        "graphene>=3.3.0",
     ],
     tests_require=tests_require,
     classifiers=[
@@ -56,12 +56,9 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.11",
         "Framework :: Django",
-        "Framework :: Django :: 2.2",
-        "Framework :: Django :: 3.0",
+        "Framework :: Django :: 4.2",
     ],
     keywords="api graphql rest relay graphene auth",
     zip_safe=False,
