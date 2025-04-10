@@ -45,7 +45,7 @@ setup(
         "Django>=3.0.0",
         "django-graphql-jwt>=0.3.3",
         "django-filter>=2.2.0",
-        "graphene_django==3.2.0",
+        "graphene_django>=3.2.0,<3.3.0",
         "graphene>=3.3.0",
     ],
     tests_require=tests_require,
